@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkbox.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
+
 <body>
-    
+    <header>
+        <div class="clock">8:30AM</div>
+        <div class="count">2/3</div>
+        <div class="container">
+            <div class="name">Kshitij</div>
+            <div class="progresbar">
+                <div class="progress"></div>
+            </div>
+            <div class="button">
+                <input type="time" name="Time" id="time">
+                <button>Start</button>
+            </div>
+    </header>
+
+    <main>
+        <h1>Task</h1>
+        <ul>
+            <li>
+                <div class="checkbox-wrapper-15">
+                    <input class="inp-cbx" id="cbx-1" type="checkbox" style="display: none;" />
+                    <label class="cbx" for="cbx-1">
+                        <span>
+                            <svg width="12px" height="9px" viewbox="0 0 12 9">
+                                <polyline points="1 5 4 8 11 1"></polyline>
+                            </svg>
+                        </span>
+                        <span>To-do</span>
+                    </label>
+                </div>
+                <button>Remove</button>
+            </li>
+            <li>
+                <div class="checkbox-wrapper-15">
+                    <input class="inp-cbx" id="cbx-2" type="checkbox" style="display: none;" />
+                    <label class="cbx" for="cbx-2">
+                        <span>
+                            <svg width="12px" height="9px" viewbox="0 0 12 9">
+                                <polyline points="1 5 4 8 11 1"></polyline>
+                            </svg>
+                        </span>
+                        <span>To-do</span>
+                    </label>
+                </div>
+                <button>Remove</button>
+            </li>
+            <li>
+                <div class="checkbox-wrapper-15">
+                    <input class="inp-cbx" id="cbx-3" type="checkbox" style="display: none;" />
+                    <label class="cbx" for="cbx-3">
+                        <span>
+                            <svg width="12px" height="9px" viewbox="0 0 12 9">
+                                <polyline points="1 5 4 8 11 1"></polyline>
+                            </svg>
+                        </span>
+                        <span>To-do</span>
+                    </label>
+                </div>
+                <button>Remove</button>
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+        <div class="complited">
+            <i class="uil uil-check"></i> 
+        </div>
+        <div class="add">Add Task</div>
+        <div class="remaning">
+            <i class="uil uil-times"></i>
+        </div>
+    </footer>
+
+
 </body>
+
 </html>
