@@ -12,7 +12,9 @@
 
 <body>
     <header>
-        <div class="clock">8:30AM</div>
+        <div class="clock time">
+            <p id="time"></p>
+        </div>
         <div class="count">2/3</div>
         <div class="container">
             <div class="name">Kshitij</div>
@@ -72,18 +74,24 @@
             </li>
         </ul>
     </main>
+    
+    <section id="inputs">
+        <input type="text" placeholder="Add Task">
+        <button onclick="closeModal()">Add</button>
+    </section>
 
     <footer>
-        <div class="complited">
+        
+        <button class="complited">
             <i class="uil uil-check"></i> 
-        </div>
-        <div class="add">Add Task</div>
-        <div class="remaning">
+        </button>
+        <button class="add" onclick="openModal()">Add Task</button>
+        <button class="remaning">
             <i class="uil uil-times"></i>
-        </div>
+        </button>
     </footer>
 
-
+    <script src="scripts.js"></script>
 </body>
 
 </html>

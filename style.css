@@ -113,7 +113,7 @@ main ul li {
   position: relative;
 }
 main ul li button {
-  background-color: #27b5e6;
+  background-color: rgba(39, 182, 230, 0.8823529412);
   border: none;
   color: #fff;
   padding: 0.5rem 1rem;
@@ -125,12 +125,43 @@ main ul li button {
 }
 main ul li button:hover {
   transform: scale(1.05) translateY(-1px);
-  background-color: rgba(127, 255, 212, 0);
-  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3137254902);
+  background-color: rgba(255, 0, 0, 0.726);
+  box-shadow: 0 5px 15px rgba(212, 0, 0, 0.3137254902);
 }
 main ul li:hover {
   transform: scale(1.05) translateY(-1px);
-  background-color: rgba(127, 255, 212, 0.486);
+  background-color: rgba(30, 154, 255, 0.274);
+}
+
+#inputs {
+  display: none;
+  background-color: rgba(51, 51, 51, 0.1921568627);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 100px;
+}
+#inputs text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+#inputs input {
+  font-size: 1.2rem;
+  width: 50%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: solid 3px #333333;
+  margin: 1rem 0.5rem;
+}
+#inputs button {
+  font-size: 1.2rem;
+  width: 20%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: solid 3px #333333;
+  margin: 1rem 0.5rem;
 }
 
 footer {
@@ -155,6 +186,12 @@ footer .complited {
   align-items: center;
   justify-content: center;
   color: #fff;
+  border: none;
+}
+footer .complited:hover {
+  transform: scale(1.05) translateY(-1px);
+  background-color: rgba(255, 0, 0, 0.726);
+  box-shadow: 0 5px 15px rgba(212, 0, 0, 0.3137254902);
 }
 footer .add {
   font-size: clamp(1.5rem, 2.5vw, 4rem);
@@ -167,6 +204,12 @@ footer .add {
   align-items: center;
   justify-content: center;
   color: #fff;
+  border: none;
+}
+footer .add:hover {
+  transform: scale(1.05) translateY(-1px);
+  background-color: rgba(255, 0, 0, 0.726);
+  box-shadow: 0 5px 15px rgba(212, 0, 0, 0.3137254902);
 }
 footer .remaning {
   font-size: clamp(1rem, 10vw, 2rem);
@@ -179,6 +222,12 @@ footer .remaning {
   align-items: center;
   justify-content: center;
   color: #fff;
+  border: none;
+}
+footer .remaning:hover {
+  transform: scale(1.05) translateY(-1px);
+  background-color: rgba(255, 0, 0, 0.726);
+  box-shadow: 0 5px 15px rgba(212, 0, 0, 0.3137254902);
 }
 
 /*# sourceMappingURL=style.css.map */

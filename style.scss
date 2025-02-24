@@ -114,7 +114,7 @@ main {
             position: relative;
 
             button {
-                background-color: #27b5e6;
+                background-color: #27b6e6e1;
                 border: none;
                 color: #fff;
                 padding: 0.5rem 1rem;
@@ -125,15 +125,47 @@ main {
                 right: 0.5rem;
                 &:hover {
                     transform: scale(1.05) translateY(-1px);
-                    background-color: rgba(127, 255, 212, 0);
-                    box-shadow: 0 5px 15px #00bcd450;
+                    background-color: rgba(255, 0, 0, 0.726);
+                    box-shadow: 0 5px 15px #d4000050;
                 }
             }
             &:hover {
                 transform: scale(1.05) translateY(-1px);
-                background-color: rgba(127, 255, 212, 0.486);
+                background-color: rgba(30, 154, 255, 0.274);
             }
         }
+    }
+}
+
+#inputs{
+    display: none;
+    background-color: #33333331;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 100px;
+    // bottom: -100px;
+    text{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #333;
+    }
+    input {
+        font-size: 1.2rem;
+        width: 50%;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: solid 3px #333333;
+        margin: 1rem 0.5rem;
+    }
+    button{
+        font-size: 1.2rem;
+        width: 20%;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: solid 3px #333333;
+        margin: 1rem 0.5rem;
     }
 }
 
@@ -158,6 +190,12 @@ footer {
         align-items: center;
         justify-content: center;
         color: #fff;
+        border: none;
+        &:hover {
+            transform: scale(1.05) translateY(-1px);
+            background-color: rgba(255, 0, 0, 0.726);
+            box-shadow: 0 5px 15px #d4000050;
+        }
     }
     .add {
         font-size: clamp(1.5rem, 2.5vw, 4rem);
@@ -170,6 +208,13 @@ footer {
         align-items: center;
         justify-content: center;
         color: #fff;
+        border: none;
+        &:hover {
+            transform: scale(1.05) translateY(-1px);
+            background-color: rgba(255, 0, 0, 0.726);
+            box-shadow: 0 5px 15px #d4000050;
+        }
+
     }
     .remaning {
         font-size: clamp(1rem, 10vw, 2rem);
@@ -182,6 +227,13 @@ footer {
         align-items: center;
         justify-content: center;
         color: #fff;
+        border: none;
+        &:hover {
+            transform: scale(1.05) translateY(-1px);
+            background-color: rgba(255, 0, 0, 0.726);
+            box-shadow: 0 5px 15px #d4000050;
+        }
+
     }
 }
 
