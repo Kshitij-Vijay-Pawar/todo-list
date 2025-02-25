@@ -43,7 +43,14 @@ const addTask = () => {
 
     console.log(tasks);
     updateStats();
+    saveTasks();
 
+}
+const deleteTask = (index) => {
+    tasks.splice(index, 1);
+    updateTasksList();
+    updateStats();
+    saveTasks();
 }
 
 const updateTasksList = () => {
@@ -74,16 +81,18 @@ const updateTasksList = () => {
         taskElement.querySelector(".inp-cbx").addEventListener("change", () => {
             tasks[index].completed = !tasks[index].completed;
             updateTasksList();
+            updateStats();
         });
 
         taskElement.querySelector("button").addEventListener("click", () => {
-            tasks.splice(index, 1);
-            updateTasksList();
+            deleteTask(index);
         });
 
         tasksList.appendChild(taskElement);
-        updateStats();
     });
+
+    updateStats();
+    saveTasks();
 };
 
 
@@ -97,3 +106,6 @@ const updateStats = () => {
     document.getElementById("progress").style.width = `${progress}%`;
 };
 
+const saveTasks = () => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+};
