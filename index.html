@@ -29,7 +29,7 @@
 
     <main>
         <h1>Task</h1>
-        <ul>
+        <ul id="tasksList">
             <li>
                 <div class="checkbox-wrapper-15">
                     <input class="inp-cbx" id="cbx-1" type="checkbox" style="display: none;" />
@@ -76,8 +76,8 @@
     </main>
     
     <section id="inputs">
-        <input type="text" placeholder="Add Task">
-        <button onclick="closeModal()">Add</button>
+        <input id="taskInput" type="text" placeholder="Add Task">
+        <button id="newTask" type="submit">Add</button>
     </section>
 
     <footer>
