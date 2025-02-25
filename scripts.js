@@ -29,6 +29,7 @@ document.getElementById("newTask").addEventListener("click", function(event) {
 
     event.preventDefault();
     addTask();
+    updateStats();
 });
 
 const addTask = () => {
@@ -41,6 +42,7 @@ const addTask = () => {
     }
 
     console.log(tasks);
+    updateStats();
 
 }
 
@@ -80,5 +82,18 @@ const updateTasksList = () => {
         });
 
         tasksList.appendChild(taskElement);
+        updateStats();
     });
 };
+
+
+const updateStats = () => {
+    const completedTasks = tasks.filter(task => task.completed).length;
+    const totalTasks = tasks.length;
+
+    document.getElementById("count").innerText = `${completedTasks} / ${totalTasks}`;
+
+    const progress = totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0;
+    document.getElementById("progress").style.width = `${progress}%`;
+};
+

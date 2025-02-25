@@ -15,11 +15,11 @@
         <div class="clock time">
             <p id="time"></p>
         </div>
-        <div class="count">2/3</div>
+        <div class="count" id="count">2/3</div>
         <div class="container">
             <div class="name">Kshitij</div>
             <div class="progresbar">
-                <div class="progress"></div>
+                <div class="progress" id="progress"></div>
             </div>
             <div class="button">
                 <input type="time" name="Time" id="time">
@@ -29,50 +29,7 @@
 
     <main>
         <h1>Task</h1>
-        <ul id="tasksList">
-            <li>
-                <div class="checkbox-wrapper-15">
-                    <input class="inp-cbx" id="cbx-1" type="checkbox" style="display: none;" />
-                    <label class="cbx" for="cbx-1">
-                        <span>
-                            <svg width="12px" height="9px" viewbox="0 0 12 9">
-                                <polyline points="1 5 4 8 11 1"></polyline>
-                            </svg>
-                        </span>
-                        <span>To-do</span>
-                    </label>
-                </div>
-                <button>Remove</button>
-            </li>
-            <li>
-                <div class="checkbox-wrapper-15">
-                    <input class="inp-cbx" id="cbx-2" type="checkbox" style="display: none;" />
-                    <label class="cbx" for="cbx-2">
-                        <span>
-                            <svg width="12px" height="9px" viewbox="0 0 12 9">
-                                <polyline points="1 5 4 8 11 1"></polyline>
-                            </svg>
-                        </span>
-                        <span>To-do</span>
-                    </label>
-                </div>
-                <button>Remove</button>
-            </li>
-            <li>
-                <div class="checkbox-wrapper-15">
-                    <input class="inp-cbx" id="cbx-3" type="checkbox" style="display: none;" />
-                    <label class="cbx" for="cbx-3">
-                        <span>
-                            <svg width="12px" height="9px" viewbox="0 0 12 9">
-                                <polyline points="1 5 4 8 11 1"></polyline>
-                            </svg>
-                        </span>
-                        <span>To-do</span>
-                    </label>
-                </div>
-                <button>Remove</button>
-            </li>
-        </ul>
+        <ul id="tasksList"></ul>
     </main>
     
     <section id="inputs">
