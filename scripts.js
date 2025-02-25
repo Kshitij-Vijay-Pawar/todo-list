@@ -51,29 +51,34 @@ const updateTasksList = () => {
     tasks.forEach((task, index) => {
         const taskElement = document.createElement("li");
 
+        const checkboxId = `cbx-${index + 1}`;
+
         taskElement.innerHTML = `
-            <li>
                 <div class="checkbox-wrapper-15">
-                    <input class="inp-cbx" id="cbx-1" type="checkbox" style="display: none;" />
-                    <label class="cbx" for="cbx-1">
+                    <input class="inp-cbx" id="${checkboxId}" type="checkbox" style="display: none;" ${task.completed ? "checked" : ""} />
+                    <label class="cbx" for="${checkboxId}">
                         <span>
                             <svg width="12px" height="9px" viewbox="0 0 12 9">
                                 <polyline points="1 5 4 8 11 1"></polyline>
                             </svg>
                         </span>
-                        <span>To-do</span>
+                        <span>${task.text}</span>
                     </label>
                 </div>
                 <button>Remove</button>
-            </li>
         `;
 
         taskElement.className = task.completed ? "completed" : "";
-        taskElement.addEventListener("click", () => {
+        taskElement.querySelector(".inp-cbx").addEventListener("change", () => {
             tasks[index].completed = !tasks[index].completed;
+            updateTasksList();
+        });
+
+        taskElement.querySelector("button").addEventListener("click", () => {
+            tasks.splice(index, 1);
             updateTasksList();
         });
 
         tasksList.appendChild(taskElement);
     });
-}
+};
