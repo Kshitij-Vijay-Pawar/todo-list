@@ -22,8 +22,9 @@
                 <div class="progress" id="progress"></div>
             </div>
             <div class="button">
-                <input type="time" name="Time" id="time">
-                <button>Start</button>
+                <input type="datetime-local" id="timeInput">
+                <button onclick="startCountdown()">Start Countdown</button>
+                <div id="timer" style="color: black;">Time remaining: --:--:--</div>
             </div>
     </header>
 
@@ -35,6 +36,9 @@
     <section id="inputs">
         <input id="taskInput" type="text" placeholder="Add Task">
         <button id="newTask" type="submit">Add</button>
+        <button class="remaning" onclick="closeModal()">
+            <i class="uil uil-times"></i>
+        </button>
     </section>
 
     <footer>

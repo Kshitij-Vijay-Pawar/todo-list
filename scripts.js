@@ -1,3 +1,7 @@
+let tasks = [];
+let countdown;
+
+// ------------------------------------------------------------------------------------------
 function updateTime() {
   let now = new Date();
   let hours = now.getHours();
@@ -14,6 +18,32 @@ updateTime();
 setInterval(updateTime, 1000);
 // -------------------------------------------------------------------------------------
 
+function startCountdown() {
+  clearInterval(countdown);
+  const inputTime = document.getElementById("timeInput").value;
+  if (!inputTime) {
+    alert("Please select a valid time!");
+    return;
+  }
+  const endTime = new Date(inputTime).getTime();
+  countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const difference = endTime - now;
+    if (difference <= 0) {
+      clearInterval(countdown);
+      document.getElementById("timer").innerText = "Time's up!";
+      return;
+    }
+    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((difference / (1000 * 60)) % 60);
+    const seconds = Math.floor((difference / 1000) % 60);
+    document.getElementById(
+      "timer"
+    ).innerText = `Time remaining: ${hours}h ${minutes}m ${seconds}s`;
+  }, 1000);
+}
+
+// ---------------------------------------------------------------------------------------------------
 function openModal() {
   document.getElementById("inputs").style.display = "flex";
 }
@@ -22,8 +52,6 @@ function closeModal() {
   document.getElementById("inputs").style.display = "none";
 }
 // ----------------------------------------------------------------------------------------
-
-let tasks = [];
 
 document.getElementById("newTask").addEventListener("click", function (event) {
   event.preventDefault();
